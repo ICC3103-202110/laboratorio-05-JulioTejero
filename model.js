@@ -3,7 +3,7 @@ initModel = {
     porcentage: 0,
     tip: 0,
     total: 0,
-    inputBA: 0,
+    inputBA: 10,
     inputP: 10
 }
 

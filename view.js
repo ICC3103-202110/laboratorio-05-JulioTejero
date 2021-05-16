@@ -5,7 +5,7 @@ const inquirer = require('inquirer')
 function getTitle(){
     return chalk.green(
         figlet.textSync(
-            'Tip App',
+            'Tip Calculator App',
             {
                 horizontalLayout: 'full',
                 font: 'Nancyj-Underlined'
@@ -20,18 +20,18 @@ function getTable(model){
     const {tip} = model
     const {total} = model
     return [
-        {'billAmount': billAmount},
-        {'porcentaje': porcentage},
-        {'tip': tip},
-        {'total': tip},
+        {'Bill Amount': `$${billAmount}`,
+        'Tip (%)': `${porcentage}%`,
+        'Tip': `$${tip}`,
+        'Total': `$${total}`}
     ]
 }
 
 function inputForm(model){
     const {inputBA} = model
-    const messageBA = 'Bill Amount?'
+    const messageBA = 'Bill Amount? '
     const {inputP} = model
-    const messageP = 'Tip Porcentage?'
+    const messageP = 'Tip(%)? '
     return inquirer.prompt([
         {
             name: 'inputBA',
